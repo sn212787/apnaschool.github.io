@@ -1,0 +1,315 @@
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif
+}
+html{
+  font-size: 62.5%;
+}
+
+
+/*----------------------------header section =----------------------------------*/
+
+
+.navsection{
+  width: 100%; height: 80px;
+  display: flex; justify-content: space-around; align-items: center;
+  padding: 20px 0;
+  background-color:white;
+  position: fixed;
+  top: 0;
+  
+ z-index: 999;
+  box-shadow: 0 0 15px 0 rgba(201, 199, 199, 0.05);
+  
+
+  
+}
+.navsection .logo{
+   
+  width: 20%;
+  color: #262626;
+  padding-left: 0;
+  text-align: center;
+  
+}
+.navsection .logo h1{
+  text-transform: uppercase; font-size: 2.8rem; 
+}
+.navsection .logo h1 span{
+  font-size: 2.3rem;
+  color: #262626;
+}
+
+nav{
+   width: 35%;
+  display: flex; justify-content: space-evenly;
+}
+nav a{
+  color: #262626;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: relative;
+  text-decoration: none;
+  opacity: 0.9;
+}
+nav a:first-child{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+nav a:last-of-type{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+
+nav a:hover{
+  color: #262626;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+nav a:before{
+  content: "";
+  border-bottom: 2px solid #262626;
+  top: 100%; left: 0;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.4s linear;
+}
+.cheakbtn{
+  font-size: 2.6rem;
+  width: 10%;
+  margin-right: 2rem;
+  display: none;
+  cursor: pointer;
+  height: 20vh;
+
+}
+#cheak{
+  display: none;
+}
+
+
+.about{
+    width: 100%;
+    height: 1200px;
+    background-image: linear-gradient(to right, #262626 40%, #3c3c3c 60%);
+
+    color: white;
+    position: relative;
+    margin-top: 80px;
+    
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+@media(max-width:768px){
+  .container .cards{
+    display: block;
+    font-size: 55%;
+  }
+}
+.container .cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 1200px;
+}
+.container .cards .card1{
+    width: 350px;
+    height: 380px;
+    background-color:#262626;
+    border: 2px solid #fff;
+    position: absolute;
+    left: 60px;
+    bottom: 150px;
+    z-index: 998;
+    border-radius: 8px;
+}
+
+.container .cards .card1, .card2, .card3 p{
+  text-transform: capitalize;
+        text-align: left;
+        letter-spacing: 2px;
+        line-height: 23px;
+        opacity: 0.99;
+        font-size: 1.5rem;
+        padding: 20px 8px;
+
+}
+.container .cards .card2{
+    width: 350px;
+    height: 380px;
+    background-color:white;
+    position: absolute;
+    left: 440px;
+    bottom: 40px;
+    z-index: 998;
+    border-radius: 8px;
+    color: #262626;
+    
+}
+.container .cards .card3{
+    width: 350px;
+    height: 380px;
+    background-color: #eeb805;
+    position: absolute;
+    right: 60px;
+    bottom: 150px;
+    z-index: 997;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+.container .left-half{
+        
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      bottom: 40px;
+      border-radius: 7px;
+        width: 26%;
+        height: 970px;
+        background-color: #eeb805;
+    }
+    .container .left-half .image img{
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        position: absolute;
+        left: -45px;
+        top: 40px;
+    }
+    .container .right-half{
+        position: absolute;
+        top: 100px;
+        right: 130px;
+        width: 26%;
+        display: flex;
+        flex-direction: column;
+       
+        
+
+    }
+    .container .right-half h2,h3{
+        text-transform: capitalize;
+        font-weight: 800;
+        padding: 12px 0;
+        text-align: center;
+        
+        
+    }
+    .container .right-half h2{
+        font-size: 4.7rem;
+        
+    }
+    .container .right-half h3{
+      font-size: 2.3rem ;
+    }
+    .container .right-half p{
+        text-transform: capitalize;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 23px;
+        
+        font-size: 1.5rem;
+    }
+
+
+ /* ----------------------------- footer section ---------------------------------- */
+
+
+
+
+/* ----------------------------- footer section ---------------------------------- */
+
+.footer{
+    padding-top: 40px;
+ width: 100%;
+ height: 400px;
+ display: flex;
+ justify-content: space-around;
+ text-transform: capitalize;
+ font-size: large;
+}
+
+.footer .about .up p{
+ padding: 6px;
+ margin: 3px;
+ line-break: normal;
+ letter-spacing: 2px;
+ line-height: 25px;
+}
+
+.footer .navigate .up{
+ display: flex;
+ flex-direction: column;
+ text-transform: capitalize;
+ padding-top: 10px;
+ }
+
+ .footer .downloades .up{
+   display: flex;
+   flex-direction: column;
+   
+ }
+
+ .footer .downloades .up > a{
+   text-decoration: none;
+   color: #000;
+   padding: 9px;
+ }
+
+.footer .navigate a{
+ text-decoration: none;
+ color: #000;
+ padding: 9px;
+ font-weight: 600;
+
+}
+
+footer .up{
+ padding-top: 10px;
+ font-weight: 600;
+ font-size: medium;
+ 
+}
+
+.about .up p{
+ opacity: 0.8;
+}
+
+.footer .social{
+ padding-top: 20px;
+}
+
+.footer .social button > i{
+ font-size: x-large;
+}
+
+.footer .social button{
+      
+ border: none;
+ border-radius: 50%;
+
+}
+
+.footer .social button > i{
+ padding: 15px;
+ margin: 3px;
+}
+
+.footer .social button:hover{
+ background-color: #a517ba;  
+ color: white;;
+ border-radius: 50%;
+ transition: all 0.2s linear;
+ color: #fff;
+ 
+}

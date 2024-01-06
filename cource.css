@@ -1,0 +1,566 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+/*----------------------------header section =----------------------------------*/
+
+.navsection{
+  width: 100%; height: 80px;
+  display: flex; justify-content: space-around; align-items: center;
+  padding: 20px 0;
+  background-color:white;
+  position: fixed;
+  top: 0;
+  
+ z-index: 1111;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 5%);
+  
+
+  
+}
+.navsection .logo{
+   
+  width: 20%;
+  color: #262626;
+  padding-left: 0;
+  text-align: center;
+  
+}
+.navsection .logo h1{
+  text-transform: uppercase; font-size: 2.8rem; 
+}
+.navsection .logo h1 span{
+  font-size: 2.3rem;
+  color: #262626;
+}
+
+nav{
+   width: 35%;
+  display: flex; justify-content: space-evenly;
+}
+nav a{
+  color: #262626;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: relative;
+  text-decoration: none;
+  opacity: 0.9;
+}
+nav a:first-child{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+nav a:last-of-type{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+
+
+nav a:hover{
+  color: #262626;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+nav a:before{
+  content: "";
+  border-bottom: 2px solid #262626;
+  top: 100%; left: 0;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.4s linear;
+}
+
+
+/*--------------------section 1--------------------------------*/
+
+main #sec-1{
+    width: 100%;
+    height: 550px;
+    background-color: white;
+    margin-top: 100px;
+    
+    
+}
+.container{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+.container .left{
+  margin: 40px;
+}
+
+ p{
+    text-transform: capitalize;
+    line-break: 1px;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+}
+
+.container .left h2{
+    
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: .3rem;
+    line-height: 1.2;
+    
+
+}
+.container .left p{
+    font-size: 2rem;
+    opacity: 0.99;
+    margin-top: 20px;
+    
+}
+.container .left button{
+    border: none;
+    
+    padding: 20px 40px;
+  background-color: #262626;
+ border: 1px solid #fff;
+ border-radius: 10px;
+ margin-top: 20px;
+}
+.left button a{
+    color: #000;
+    text-decoration: none; color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 20px 0;
+    font-weight: bold;  
+  }
+  .left button:hover{
+    
+    background-color:#fff;
+    transition: all 0.3s linear;
+    border: 2px solid #262626;
+  }
+  .left button a:hover{
+    color: #262626;
+  
+  }
+  
+  .right iframe{
+    margin-top: 50px;
+    border-radius: 6px;
+  }
+  .details{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .details p{
+    text-transform: uppercase;
+  }
+
+  /*  =-----------------section 2 ---------------------*/
+
+  section .container-2{
+                   
+              width: 100%;
+              height: 315px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-transform: capitalize;
+              color: #ffffff;
+      background-image: linear-gradient(to right, #262626 40%, #3c3c3c 60%);
+    
+  }
+
+  section .container-2 h2{
+    font-size: 4.2rem;
+    padding: 12px 0;
+    font-weight: bold;
+  }
+
+  section .container-2 h3{
+    font-size: 3.2rem;
+    padding: 12px 0;
+    font-weight: lighter;
+    
+
+  }
+  section .container-2 button{
+    border: none;
+    padding: 20px 40px;
+  background-color: #fff;
+ border: none;
+ border-radius:6px;
+ border-radius:6px;
+ margin-top: 20px;
+  }
+  section .container-2 button a{
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 20px 0;
+  font-weight: bold; 
+
+  }
+
+  section .container-2 button:hover{
+    color: #000;
+    background-color: #262626;
+    transition: all 0.3s linear;
+    border: 2px solid #fff;
+  }
+  section .container-2 button a:hover{
+    color: #fff;
+  
+  }
+
+
+/*--------------------------section-3----------------------------*/
+
+  section .container-3{
+    width: 100%;
+    height: 1400px;
+    position: relative;
+    background-color: #f8f8fd;
+   text-align: center;
+   padding: 30px 0;
+   text-transform: capitalize;
+   font-size: 3.2rem;
+    
+    
+  }
+
+  section .container-3 .img{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    top: 120px;
+    left: 60px;
+    right: 60px;
+    bottom: 100px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  section .container-3 .img img{
+    width: 350px;
+    height: 400px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding: 30px;
+  }
+  section .container-3 .text{
+    position: absolute;
+    bottom: 20px;
+    left: 43%;
+    font-weight: light;
+    font-size: 1.8rem;
+  }
+
+  /* ---------------section-4 ----------------*/
+
+  section .container-4{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 350px;
+  }
+
+  section .container-4 .learn{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+  }
+  section .container-4 .learn p{
+    padding: 3px 0;
+    text-transform: uppercase;
+    font-size: large;
+    opacity: 0.9;
+  }
+  section .container-4 .learn h2{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 2.6rem;
+    
+  }
+
+  section .container-4 .practice p{
+
+    padding: 3px 0;
+    text-transform: capitalize;
+    line-break: normal;
+    font-size: large;
+    opacity: 0.9;
+  
+  }
+  section .container-4 .practice p:last-of-type{
+
+    color: rgb(115, 115, 255);
+  }
+
+  section .container-4 .practice h2{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    
+  }
+
+  section .container-4 .practice{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+  }
+
+  section .container-4 .videos{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+  }
+
+  section .container-4 .videos h2{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    
+  }
+
+  section .container-4 .videos p{
+
+
+    padding: 3px 0;
+    text-transform: capitalize;
+    line-break: normal;
+    font-size: large;
+    opacity: 0.9;
+  }
+  section .container-4 .practice .icons{
+    font-size: 3.2rem;
+    color: rgb(115, 115, 255);
+  }
+  section .container-4 .videos .icons{
+    font-size: 3.2rem;
+    color: rgb(115, 115, 255);
+  }
+
+  section .container-4 .learn i{
+    color: lightgreen;
+    font-weight:600;
+  }
+  
+  /*-----------------------section-5---------------------*/
+
+  section .container-5{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 640px;
+    padding: 0 60px;
+    background-color: #f8f8fd;
+  }
+  
+  section .container-5 .left{
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding: 20px 10px;
+  }
+
+  section .container-5 .right{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 10px;
+}
+
+
+section .container-5 h2,h1,h3{
+
+  text-transform: capitalize;
+  font-size: 3.2rem;
+}
+section .container-5 h2:last-of-type{
+  text-transform: uppercase;
+}
+section .container-5 i{
+  color: rgb(87, 87, 234);
+}
+/*---------------------road-map-------------------------*/
+
+section .road img{
+  object-fit: cover;
+  width: 100%;
+  
+}
+
+/*---------------------section-5-----------------------*/
+.container-6{
+  width: 100%;
+  height: 550px;
+  background-color: #f8f8fd;
+  
+}
+section .taught{
+
+
+  display: flex;
+  justify-content: center;
+  
+}
+section .taught .my-pic{
+  text-align: center;
+  
+}
+
+section .taught .my-pic img{
+                      
+          border-radius: 50%;
+          width: 180px;
+          height: 180px;
+        margin-top: 50px;
+}
+section .taught .my-pic .heading{
+  font-size: 1.5rem;
+  color: rgb(78, 78, 243);
+  text-transform: uppercase;
+  margin-top: 28px;
+  font-weight: bold;
+}
+section .taught .my-pic .name{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: -30px;
+}
+section .logos{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  
+  
+
+}
+section .microsoft{
+  text-align: center;
+  
+}
+section .microsoft i{
+  font-size: 52px;
+  color: #ffbb00;
+  color: #00a1f1;
+}
+section .logos p{
+  opacity: 0.83;
+}
+
+ /* ----------------------------- footer section ---------------------------------- */
+
+
+ .footer{
+  padding-top: 40px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  text-transform: capitalize;
+  font-size: large;
+}
+
+.footer .about .up p{
+  padding: 6px;
+  margin: 3px;
+  line-break: normal;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+
+.footer .navigate .up{
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  padding-top: 10px;
+  }
+
+  .footer .downloades .up{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .footer .downloades .up > a{
+    text-decoration: none;
+    color: #000;
+    padding: 9px;
+  }
+
+.footer .navigate a{
+  text-decoration: none;
+  color: #000;
+  padding: 9px;
+  font-weight: 600;
+
+}
+
+footer .up{
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: medium;
+  
+}
+
+.about .up p{
+  opacity: 0.8;
+}
+
+.footer .social{
+  padding-top: 20px;
+}
+
+.footer .social button > i{
+  font-size: x-large;
+  color: black;
+
+}
+
+.footer .social button{
+       
+  border: none;
+  border-radius: 50%;
+
+}
+
+.footer .social button > i{
+  padding: 15px;
+  margin: 3px;
+}
+
+.footer .social button > i:hover{
+  
+  color: white; 
+
+  border-radius: 50%;
+  transition: all 0.2s linear;
+  color: #fff;
+  
+}
+.up i{
+  color: rgb(87, 87, 234);
+}

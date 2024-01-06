@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .to-do {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        height: 100vh;
+        background-color: aquamarine;
+      }
+      .to-do div {
+      }
+      input[type="text"] {
+        border: none;
+        background-color: beige;
+        border-radius: 2px;
+        width: 60%;
+        padding: 10px;
+      }
+      input[type="submit"] {
+        padding: 12px;
+        border: none;
+        background-color: red;
+        border-radius: 6px;
+      }
+      input[type="submit"]:hover {
+        background-color: rgb(14, 231, 14);
+        transition: all 0.3s linear;
+      }
+      .table {
+        margin-top: 13px;
+        border-collapse: collapse;
+      }
+      .table {
+        margin-left: 250px;
+        border-collapse: collapse;
+      }
+      .table th {
+        border: 1px solid gray;
+        border-radius: 2px;
+        padding: 12px;
+        width: 80%;
+      }
+      .table tbody {
+        padding: 20px;
+      }
+      .done,
+      .delete {
+        border: none;
+        border-radius: 2px;
+        color: white;
+      }
+      .done {
+        background-color: green;
+      }
+      .delete {
+        background-color: red;
+      }
+      tr,
+      td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="to-do">
+      <div>
+        <h2><strong>To-do</strong>-list</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="enter data"
+            required
+          />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+      <div class="table">
+        <table class="data-table">
+          <thead>
+            <th>Name</th>
+            <th>Action</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $("form").submit(function (e) {
+        e.preventDefault();
+        var name = $("input[name='name']").val();
+        $(".data-table tbody").append(
+          "<tr data-name='" +
+            name +
+            "' class='name'><td class='data'>" +
+            name +
+            "</td><td><button class='done'>Done</button><button class='delete'>Delete</button></td></tr>"
+        );
+
+        //$("input[name='name']").val('');
+      });
+      $("tbody").on("click", ".delete", function () {
+        $(this).parents("tr").remove();
+      });
+
+      $("body").on("click", ".done", function () {
+        var name = $(this).parents("tr").attr("data-name");
+
+        $(this)
+          .parents("tr")
+          .find("td:eq(0)")
+          .css({
+            "text-decoration": "line-through",
+            "background-color": "yellow",
+          });
+      });
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us</title>
+    <style>
+      /* CSS for About Us page goes here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+      }
+
+      .header h1 {
+        margin: 0;
+      }
+
+      .header p {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .about-section {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+      }
+
+      .about-section h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .about-section p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        width: 100%;
+        text-align: justify;
+      }
+
+      .about-section .image {
+        width: 300px;
+        height: 200px;
+        margin-right: 20px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .about-section .image:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .mission-section {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .mission-section h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .mission-section p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        width: 100%;
+        text-align: justify;
+      }
+
+      .team-section {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+      }
+
+      .team-section h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>Tech Company</h1>
+        <p>Leading the way in innovative technology solutions</p>
+      </div>
+
+      <!-- About Us Section -->
+      <div class="about-section">
+        <h2>About Us</h2>
+        <img class="image" src="company-overview.jpg" alt="Company Overview" />
+        <p>
+          Tech Company was founded in 2010 with the goal of providing
+          cutting-edge technology solutions to businesses of all sizes. Our team
+          of experts are dedicated to staying up-to-date on the latest
+          technology trends and are committed to delivering the highest quality
+          products and services to our clients.
+        </p>
+      </div>
+
+      <!-- Mission Section -->
+      <div class="mission-section">
+        <h2>Mission</h2>
+        <p>
+          Our mission is simple: to provide the best technology solutions to our
+          clients and help them succeed in the digital age. We strive to be the
+          go-to source for businesses looking to improve their operations and
+          stay ahead of the competition through the use of technology.
+        </p>
+      </div>
+
+      <!-- Team Section -->
+      <div class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+          <img class="image" src="team-member-1.jpg" alt="Team Member 1" />
+          <h3>John Doe</h3>
+          <p>CEO and Founder</p>
+        </div>
+        <div class="team-member">
+          <img class="image" src="team-member-2.jpg" alt="Team Member 2" />
+          <h3>Jane Doe</h3>
+          <p>COO</p>
+        </div>
+        <div class="team-member">
+          <img class="image" src="team-member-3.jpg" alt="Team Member 3" />
+          <h3>Bob Smith</h3>
+          <p>CTO</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

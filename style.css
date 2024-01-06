@@ -1,0 +1,603 @@
+*{
+  padding: 0; margin: 0; box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+
+  
+}
+html{
+  font-size: 62.5%;
+}
+
+
+/*----------------------------header section =----------------------------------*/
+
+
+.navsection{
+  width: 100%; height: 80px;
+  display: flex; justify-content: space-around; align-items: center;
+  padding: 20px 0;
+  background-color:white;
+  position: fixed;
+  top: 0;
+  
+ z-index: 1111;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 5%);
+  
+
+  
+}
+.navsection .logo{
+   
+  width: 20%;
+  color: #262626;
+  padding-left: 0;
+  text-align: center;
+  
+}
+.navsection .logo h1{
+  text-transform: uppercase; font-size: 2.8rem; 
+}
+.navsection .logo h1 span{
+  font-size: 2.3rem;
+  color: #262626;
+}
+
+nav{
+   width: 35%;
+  display: flex; justify-content: space-evenly;
+}
+nav a{
+  color: #262626;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: relative;
+  text-decoration: none;
+  opacity: 0.9;
+}
+nav a:first-child{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+nav a:last-of-type{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+
+
+nav a:hover{
+  color: #262626;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+nav a:before{
+  content: "";
+  border-bottom: 2px solid #262626;
+  top: 100%; left: 0;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.4s linear;
+}
+.cheakbtn{
+  font-size: 2.6rem;
+  width: 10%;
+  margin-right: 2rem;
+  display: none;
+  cursor: pointer;
+  height: 20vh;
+
+}
+#cheak{
+  display: none;
+}
+
+/*-----------------media quiries--------------*/
+
+@media(max-width:969px){
+  nav a{
+    color: #262626;
+    font-weight: 500;
+    font-size: 1.3rem;
+  text-transform: uppercase;
+    opacity: 0.8;
+  }
+  nav a:first-of-type{
+
+  }
+}
+@media(max-width:768px){
+  .cheakbtn{
+    display: block;
+    float: right;
+    height: 70px;
+    line-height: 2px;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 400px;
+    top: 90px;
+    left: -100%;
+    text-align: center;
+    background-color: #2c3e50;
+  }
+  nav a{
+    display: block;
+    border-bottom: none;
+    padding: 12px 0;
+  }
+  #cheak:checked ~ nav{
+    left: 0;
+  }
+  .navsection .logo{
+    padding-left: 0;
+  }
+  .navsection .logo h1{
+    font-size: 2.2rem;
+    line-height: 40px;
+  }
+  
+  
+}
+@media(min-width:500px) and (max-width:767){
+  header{
+    width: 100%;
+    height: 15vh;
+    font-size: 40%;
+  }
+}
+
+nav a:hover:before{
+  width: 100%;
+  opacity: 0.8;
+}
+
+ .main{
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  animation: lefttoright 4s ;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.main .right img{
+  width: 500px;
+  height: 400px;
+  margin-top: 50px;
+}
+@keyframes lefttoright{
+  from{left:0%;}
+  to{right:40% ;}
+}
+.main h1{
+  font-size: 6rem;
+  text-transform: capitalize;
+  padding-top: 60px;
+  padding-left: 70px;
+  font-weight: bolder;
+  display: flex; justify-content:flex-start;
+    align-items: center;
+}
+.main h3{
+  font-size: 4rem;
+  text-transform: capitalize;
+  padding-top: 25px;
+  font-weight: lighter;
+  padding-left: 70px;
+  
+}
+.main h3:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: #262626;
+  font-weight: 600;
+  padding-top: 25px;
+  padding-left: 70px;
+
+}
+
+@keyframes changetext {
+  0% {
+    content: "C++";
+  }
+  20% {
+    content: "Java";
+  }
+  35% {
+    content: "Python";
+  }
+  60% {
+    content: "C#";
+  }
+  80% {
+    content: "Web-Development";
+  }
+  100% {
+    content: "Android-Development";
+  }
+}
+.main .btn{
+  
+  padding-top: 30px;
+  padding-left: 100px;
+  
+}
+.btn button{
+  padding: 20px;
+  background-color: #262626;
+ border: 1px solid #fff;
+ border-radius: 4px;
+}
+.btn button a{
+  color: #fff;
+  text-decoration: none; color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 20px 0;
+  font-weight: bold;  
+}
+.btn button:hover{
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #262626;
+  transition: all 0.3s linear;
+}
+.btn button a:hover{
+  color: black;
+
+}
+/*----------------------------imges section----------------------------*/
+  
+main .images{
+  width: 100%;
+  
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.images .left img{
+  width: 450px;
+  height: 400px;
+  
+
+}
+.images .right{
+  flex-wrap: wrap;
+  width: 40%;
+  margin-top: 50px;
+}
+.images .right p{
+  opacity: 0.99;
+  line-height: 20px;
+  line-break: normal;
+  font-size: large;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-top: 10px;
+}
+
+.images .right h2{
+  font-size: 4rem;
+}
+
+/*--------------------------explore--------------------*/
+
+.explore{
+  width: 100%;
+  height: 350px;
+  background-image: linear-gradient(to right, #262626 40%, #3c3c3c 60%);
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+color: #fff;
+gap: 16px;
+text-transform: capitalize;
+  
+}
+.explore h3{
+  font-size: 2.5rem;
+  
+}
+.explore p{
+  font-size: 1.8rem;
+}
+.explore button{
+  background-color: #fff;
+  padding: 16px 25px;
+  border-radius: 8px;
+}
+.explore button a{
+  text-decoration: none;
+  color: #262626;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+
+}
+.explore button:hover{
+  background-color: #262626;
+  border: 2px solid #fff;
+  transition: all 0.3s linear;
+  color: #fff;
+}
+.explore button a:hover{
+  color: #fff;
+}
+/* ----------------------------join section ----------------------------- */
+
+.join-container{
+    
+    width: 100%;
+    height: 500px;
+    background-color: #f8f8fd;
+    margin-top: 20px;
+    
+}
+
+.join-h3{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    font-weight: normal;
+    letter-spacing: 0.00rem;
+    
+}
+
+.join-icons{
+    
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+    
+}
+
+.join-icons i{
+  font-size: 5.5rem;
+  margin-top: 70px;
+  cursor: pointer;
+
+}
+
+
+.join-icons .fa-facebook{
+
+    color:#3d2abc;
+    cursor: pointer;
+}
+
+.join-icons .fa-instagram{
+
+    color:#e320a5;
+}
+
+.join-icons .fa-youtube-play{
+
+color:#FF0000;
+}
+
+#youtube{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#youtube p{
+  text-transform: capitalize;
+  font-size: 2rem;
+  
+}
+
+#insta{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#insta p{
+  text-transform: capitalize;
+  font-size: 2rem;
+  
+}
+
+.facebook{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+
+}
+
+.facebook p{
+  text-transform: capitalize;
+  font-size: 2rem;
+  
+}
+
+ .join-h3 h3:after {
+display: flex;
+content: "";
+animation: changetextjoin 7s infinite linear;
+font-weight: 600;
+}
+
+@keyframes changetextjoin{
+0% {
+  content: "#Youtube";
+color: #FF0000;
+}
+50% {
+  content: "#Instagram";
+  color: #e320a5;
+}
+100% {
+  content: "#Facebook";
+  color: #3d2abc;
+}
+}
+
+/* ----------------------------get button section --------------------------- */
+
+ .apps{
+  width: 100%;
+  height: 370px;
+  background-image: linear-gradient(to right, #262626 40%, #3c3c3c 60%);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.get-app h1{
+  color: white;
+  font-weight: 3000;
+  font-size: 9rem;
+  text-transform: capitalize;
+}
+
+.button button a{
+
+  text-decoration: none;
+  color: white;
+  padding: 17px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.button button{
+       padding: 17px;
+      background-color: black;
+      border-radius: 4px;            
+}
+.button button:hover{
+  
+  background-color: #fff;
+  border: 2px solid #262626;
+  transition: all 0.3s linear;
+}
+.button button a:hover{
+  color: #262626;
+
+}
+
+
+ /* ----------------------------- footer section ---------------------------------- */
+
+
+.footer{
+  padding-top: 40px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  text-transform: capitalize;
+  font-size: large;
+}
+
+.footer .about-footer .up p{
+  padding: 6px;
+  margin: 3px;
+  line-break: normal;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+
+.footer .navigate .up{
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  padding-top: 10px;
+  }
+
+  .footer .downloades .up{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .footer .downloades .up > a{
+    text-decoration: none;
+    color: #000;
+    padding: 9px;
+  }
+
+.footer .navigate a{
+  text-decoration: none;
+  color: #000;
+  padding: 9px;
+  font-weight: 600;
+
+}
+
+.footer .up{
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: medium;
+  
+}
+
+.about-footer .up p{
+  opacity: 0.8;
+}
+
+.footer .social{
+  padding-top: 20px;
+}
+
+.footer .social button > i{
+  font-size: x-large;
+}
+
+.footer .social button{
+       
+  border: none;
+  border-radius: 50%;
+
+}
+
+.footer .social button > i{
+  padding: 15px;
+  margin: 3px;
+}
+
+.footer .social button:hover{
+  background-color: #262626;  
+  color: white;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+  color: #fff;
+  
+}
+
+
+/*  for mobiles   */
+
+@media(max-width:768px){
+  .navsection{
+    
+    display: block;
+    font-size: 45%;
+    color: yellow;
+    
+    
+  
+    
+  }
+  nav {
+  
+    display: block;
+    font-size: 45%;
+}
+}
+
